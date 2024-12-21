@@ -1,6 +1,12 @@
 .fixed {
   position: fixed;
-  transform: translateY(-140%);
+  transform: translateY(-170%);
+}
+
+@media (max-width: 864px) {
+  .fixed {
+    transform: translateY(-140%);
+  }
 }
 
 .nav {
