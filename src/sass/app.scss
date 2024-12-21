@@ -1,0 +1,69 @@
+@import './libs/normalize';
+@import './components/all';
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.footer {
+  padding: 35px 0px;
+  background-color: #1a1a1a;
+
+  &__address {
+    font-size: 1.1rem;
+  }
+
+  &__contacts {
+    font-size: 1.1rem;
+    line-height: 35px;
+  }
+
+	@media (max-width: 976px) {
+		&__address {
+			display: block;
+		}
+	
+		&__contacts {
+			display: block;
+		}
+	}
+
+	@media (max-width: 874px) {
+		&__info {
+			flex-direction: column;
+			gap: 40px;
+			align-items: flex-start;
+		}
+
+		&__address  {
+			max-width: 210px;
+		}
+	}
+
+	@media (max-width: 460px) {
+		.container {
+			flex-direction: column;
+			gap: 60px;
+			align-items: center;
+		}
+	}
+}
+
+.back {
+	margin-top: 20px;
+	margin-bottom: 35px;
+	color: white;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+	font-size: 1.5rem;
+}

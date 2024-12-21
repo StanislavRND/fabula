@@ -1,0 +1,87 @@
+@import '../libs/variables';
+
+.edge {
+	margin-top: 80px;
+
+	&__title {
+		font-size: 2.3rem;
+		color: white;
+		text-align: center;
+		font-weight: 500;
+		margin-bottom: 50px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+	}
+
+	&__item {
+		text-align: center;
+		background-color: white;
+		padding: 30px 0px;
+		border-radius: 10px;
+
+		&-title {
+			font-size: 1.2rem;
+			margin-top: 15px;
+			line-height: 26px;
+		}
+	}
+
+	@media (max-width: 850px) {
+		&__items {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&__title {
+			font-size: 1.6rem;
+			margin-bottom: 35px;
+		}
+	}
+
+	@media (max-width: 675px) {
+		&__items {
+			grid-template-columns: repeat(1, 350px);
+			justify-content: center;
+		}
+	}
+}
+
+@media (max-width: 976px) {
+	.edge {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 584px) {
+	.edge {
+		margin-top: 40px;
+	}
+}
+@media (max-width: 500px) {
+	.edge {
+		margin-top: 85px;
+	}
+}
+
+@media (max-width: 460px) {
+	.edge {
+		margin-top: 130px;
+	}
+}
+
+@media (max-width: 431px) {
+	.edge {
+		margin-top: 160px;
+	}
+}
+
+@media (max-width: 370px) {
+	.edge {
+		margin-top: 180px;
+	}
+}
+
+

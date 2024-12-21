@@ -1,0 +1,78 @@
+@import '../libs/variables';
+
+.header {
+  background-color: $dark-grey;
+  padding: 17px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+
+  &__info {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+
+  &__address {
+    font-size: 0.9rem;
+    letter-spacing: 0.1px;
+    line-height: 20px;
+
+    a {
+      color: white;
+    }
+  }
+
+  &__contacts {
+    line-height: 28px;
+    font-size: 0.9rem;
+
+    &-ws,
+    &-tg {
+      a {
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+
+  &__button {
+    padding: 12px 15px;
+    background-color: $green;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: white;
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: $dark-green;
+      transition: 0.3s ease;
+    }
+  }
+
+  @media (max-width: 976px) {
+		&__address {
+			display: none;
+		}
+
+		&__contacts {
+			display: none;
+		}
+  }
+}

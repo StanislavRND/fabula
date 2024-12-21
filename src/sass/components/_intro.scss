@@ -1,0 +1,152 @@
+@import '../libs/variables';
+
+.intro {
+  position: relative;
+  &__image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      background: linear-gradient(to top, rgb(26, 26, 26), rgba(34, 34, 34, 0));
+    }
+  }
+
+  @media (max-width: 976px) {
+    &__image {
+      img {
+        max-height: 350px;
+      }
+    }
+  }
+
+  &__info {
+    position: absolute;
+    top: 110px;
+    left: 130px;
+    color: white;
+
+    .container {
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    &-subtitle {
+      color: #afafaf;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    &-title {
+      font-size: 4.8rem;
+      max-width: 700px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 976px) {
+      &-title {
+        font-size: 3.5rem;
+      }
+
+      &-subtitle {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 750px) {
+      &-title {
+        font-size: 2.5rem;
+        max-width: 500px;
+      }
+
+      &-subtitle {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 584px) {
+      &-title {
+        font-size: 2rem;
+        max-width: 400px;
+      }
+
+      &-subtitle {
+        font-size: 0.9rem;
+      }
+    }
+		
+		@media (max-width: 484px) {
+    
+
+      &-subtitle {
+        max-width: 400px;
+				padding: 10px 0px;
+				box-sizing: border-box;
+      }
+    }
+		
+  }
+
+  
+
+  @media (max-width: 976px) {
+    &__info {
+      top: 90px;
+      left: 15px;
+    }
+  }
+
+  &__plus {
+    color: white;
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translate(-50%, -50%);
+
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 100px;
+      padding-left: 50px;
+      font-size: 1.3rem;
+      color: #a5a5a5;
+
+      &-title {
+        min-width: 200px;
+      }
+
+      &-svg {
+        padding-right: 50px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        border-right: 1px solid #a5a5a5;
+      }
+
+      &:last-child &-svg {
+        border-right: none;
+      }
+    }
+  }
+  @media (max-width: 1370px) {
+    &__plus {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import '../libs/variables';
+
+.support {
+  margin-top: 70px;
+  position: relative;
+
+  &__img {
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    height: 328px;
+  }
+
+  &__form {
+    position: absolute;
+    top: 105px;
+    left: 130px;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    &-flex {
+      display: flex;
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      &-flex {
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__form {
+      top: 20px;
+    }
+  }
+
+  @media (max-width: 584px) {
+    &__form {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 584px) {
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__input {
+    height: 50px;
+    width: 320px;
+    background-color: rgb(61, 61, 61);
+    border-radius: 10px;
+    padding-left: 15px;
+    font-size: 1.1rem;
+    background-color: white;
+
+    &::placeholder {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 976px) {
+    &__input {
+      width: 250px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__input {
+      width: 100%;
+    }
+  }
+
+	@media (max-width: 500px) {
+    &__input {
+      width: 250px;
+    }
+  }
+
+  &__button {
+    padding: 12px 30px;
+    background-color: $green;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: white;
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: $dark-green;
+      transition: 0.3s ease;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__button {
+      width: 70%;
+    }
+  }
+
+	@media (max-width: 584px) {
+    &__button {
+      width: 100%;
+    }
+  }
+}
