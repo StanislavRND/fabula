@@ -38,6 +38,18 @@
     }
   }
 
+  @media (max-width: 680px) {
+    &__form {
+      top: 10px;
+    }
+  }
+
+  @media (max-width: 590px) {
+    &__form {
+      top: 0px;
+    }
+  }
+
   @media (max-width: 584px) {
     &__form {
       left: 50%;
@@ -61,14 +73,14 @@
   &__input {
     height: 50px;
     width: 320px;
-    background-color: rgb(61, 61, 61);
+    background-color: white; // Ensure the input background is white
     border-radius: 10px;
     padding-left: 15px;
     font-size: 1.1rem;
-    background-color: white;
 
     &::placeholder {
       font-size: 1.1rem;
+      color: #aaa; // Optional placeholder color
     }
   }
 
@@ -84,7 +96,7 @@
     }
   }
 
-	@media (max-width: 500px) {
+  @media (max-width: 500px) {
     &__input {
       width: 250px;
     }
@@ -92,15 +104,25 @@
 
   &__button {
     padding: 12px 30px;
-    background-color: $green;
+    background-color: $green; // Use your variable for green
     border-radius: 8px;
     font-size: 1rem;
     color: white;
-    transition: 0.3s ease;
+    transition: background-color 0.3s ease;
 
-    &:hover {
-      background-color: $dark-green;
-      transition: 0.3s ease;
+    &[disabled] {
+      background-color: #ccc; // Grey out button when disabled
+      cursor: not-allowed; // Change cursor when disabled
+    }
+
+    &[disabled]:hover {
+      background-color: #ccc; // Maintain grey color on hover when disabled
+    }
+
+    &:hover:not([disabled]) {
+      // Only change background on hover if not disabled
+      background-color: $dark-green; // Use your variable for dark green
+      transition: background-color 0.3s ease;
     }
   }
 
@@ -110,9 +132,65 @@
     }
   }
 
-	@media (max-width: 584px) {
+  @media (max-width: 584px) {
     &__button {
       width: 100%;
     }
   }
+}
+
+.support__checkbox-container {
+  display: flex;
+  align-items: center;
+
+  input[type='checkbox'] {
+    display: none; // Hide default checkbox
+  }
+}
+
+.support__checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+
+  &.checked {
+    background-color: #4caf50; /* Green background when checked */
+
+    svg {
+      display: block; /* Show the checkmark */
+    }
+  }
+
+  svg {
+    display: none; /* Hide the checkmark by default */
+    width: 16px;
+    height: 16px;
+
+    path {
+      stroke: white;
+      stroke-width: 2;
+      fill: none;
+    }
+  }
+}
+
+.custom-alert {
+  position: fixed;
+  top: 60px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 160, 32); /* Blue background */
+  border: 1px solid white;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it appears above other content */
+  transition: opacity 0.3s ease;
 }

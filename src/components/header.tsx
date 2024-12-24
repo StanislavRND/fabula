@@ -99,7 +99,7 @@ export const Header = () => {
               </div>
             </div>
             <button onClick={() => scrollToSection('support')} className="header__button">
-              Обратный звонок
+              Обратный связь
             </button>
           </div>
         </div>
